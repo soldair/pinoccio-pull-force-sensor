@@ -1,0 +1,36 @@
+
+function forcesensor{
+  
+  z = y;
+  y = x;
+  x = a0;
+
+  if(u > x) {
+   u = x;
+  }  
+
+  if(u < 20 && z > -1 && y > -1 && x > -1){
+    
+    w = x-z;
+    if(w > 5 || w < -5) { 
+ 
+      if(x > z && v != 1){
+        v = 1;
+        print "going up ",w;
+      } 
+
+      if(x < z && v != -1){
+        v = -1;
+        print "going down",w;
+      }
+
+      print x,y,z;
+
+    }
+  }
+
+  snooze(100);
+}
+
+
+
